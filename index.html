@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="blog">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.min.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+    <title>Dog With A Blog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+   <ul ng-controller="ActiveCtrl" class="nav nav-pills nav-justified nav-fixed-top">
+        <li ng-class="{active: $location.path() == '/'}">
+            <a href="#/">Home</a>
+       </li>
+       <li ng-class="{active: $location.path() == '/newpost'}">
+           <a href="#/newpost">New Post</a>
+       </li>
+       <li ng-class="{active: $location.path() == '/posts'}">
+           <a href="#/posts">Posts</a>
+       </li>
+    </ul>
+    <div class="container">
+        <div ng-view>
+
+        </div>
+    </div>
+    
+    <script src="jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
+</body>
+
+</html>
