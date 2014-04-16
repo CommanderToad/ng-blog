@@ -1,3 +1,16 @@
 body {
-    background-color: #00CC99;
+    background-color: #426A75;
+    color: white;
+}
+
+.editBar {
+    float: right;
+}
+
+.jumbotron {
+    background-color: grey;
+}
+
+a {
+    color: white;
 }

@@ -1,6 +1,7 @@
 var blog = angular.module("blog", [
     'ngRoute', 
-    'blogControllers'
+    'blogControllers',
+    'firebase'
 ]);
     
 blog.config(['$routeProvider',
@@ -12,11 +13,11 @@ blog.config(['$routeProvider',
       })
       .when('/posts', {
         templateUrl: 'partials/posts.html',
-        controller: 'PostsCtrl'
+        controller: 'PostsPage'
       })
-      .when('/newpost', {
+      .when('/newpost/:firebaseID?', {
         templateUrl: 'partials/newpost.html',
-        controller: 'NewPostCtrl'
+        controller: 'ChatController'
       })
       .otherwise({
         redirectTo: '/'

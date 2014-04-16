@@ -1,15 +1,17 @@
-<div class="col-lg-6 col-md-6" ng-controller="NewPostCtrl">
-         <h2>Create New Post</h2>
-         <br>
-           <form role="form" ng-submit="submitNewPost()">
-	           <div class="form-group">
-                    <label for="organization">Post Title</label>
-                    <input ng-model="newPostTitle" class="form-control" id="labelInput" required>
-	           </div>
-               <div class="form-group">
-                    <label for="lastName">Post Content</label>
-                    <textarea class="form-control" ng-model="newPostContent" required></textarea>
-               </div>
-               <button type="submit" class="btn btn-primary btn-block" >Submit</button>
-         </form>
-    </div>
+<div class="col-md-1"></div>
+<div class="col-md-10">
+    <h2>{{editing ? 'Edit' : 'Create New'}} Post</h2>
+    <br>
+    <form role="form" ng-submit="addMessage()">
+       <div class="form-group">
+            <label for="organization">Post Title</label>
+            <input ng-model="post.title" class="form-control" id="labelInput" required>
+       </div>
+       <div class="form-group">
+            <label for="lastName">Post Content</label>
+            <textarea class="form-control" ng-model="post.content" required></textarea>
+       </div>
+       <button type="submit" class="btn btn-primary btn-block" >Submit</button>
+    </form>
+</div>
+<div class="col-md-1"></div>
